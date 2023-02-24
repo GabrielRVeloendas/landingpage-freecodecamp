@@ -1,0 +1,386 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: 'Nunito';
+}
+
+@font-face {
+  src: url(Font/Nunito/Nunito-VariableFont_wght.ttf);
+  font-family: 'Nunito';
+  font-weight: normal;
+}
+
+header {
+    background: linear-gradient(90deg, #31414D, #2B3944) ;
+    height: 100px;
+}
+
+/*é referente a imagem no menu*/
+#header-img { 
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 100px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.hover_logo {
+    position: absolute;
+    display: none;
+}
+
+/*------------------------*/
+nav { 
+  position: absolute;
+  top: 35px;
+  right: 50px;
+}
+
+nav li {
+  display: inline;
+  margin: 0 0 0 15px;
+}
+
+nav a { /*esta parte é a visual do menu*/
+  color: #fff;
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+nav :hover { /*referente ao link quando o usuário passar o mouse no menu */
+  color: #31addf;
+}
+
+#header-img:hover{
+    display: inline;
+    z-index: -1;
+}
+
+.hamburguer {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 5px auto;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.first-part {
+  background-color: #0c0c0c;
+  display: flex;
+  height: 550px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60%;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+#form h1 {
+  position: relative;
+  top: 22%;
+  display: flex;
+  font-size: 5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.email {
+  padding: 0 15px;
+}
+
+.submit {
+  text-transform: uppercase;
+  background-color: #157aa2;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  height: 40px;
+  transition: 0.2s ease;
+}
+
+.submit:hover {
+  background-color: #0c0c0c;
+  border: 1px solid #fff;
+}
+
+#image {
+  align-items: flex-end;
+  right: 0;
+  bottom: 0;
+
+}
+
+#image img{
+  position: relative;
+  display: flex;
+  max-height: 100%;
+  max-width: 100%;
+  height: 800px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.second-part {
+  position: relative;
+  width: 60%;
+  background-color: #fff;
+  padding: 15px 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: -25px;
+  margin-left: 20%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.second-part:not(h2, h3) {
+  display: flex;
+  flex-direction: column;
+}
+
+.second-part #icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.second-part img {
+  margin-right: 20px;
+  padding-top: 5px;
+}
+
+.second-part h2 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+
+.second-part h3 {
+  font-size: 1.3rem;
+}
+
+.second-part .hover_img {
+  position: absolute;
+}
+
+.second-part .hover_img:hover {
+  z-index: -1;
+}
+
+.second-part .icon-img:hover {
+  z-index: 1;
+}
+
+#video-section {
+  justify-content: center;
+  text-align: center;
+  background-color: #e4e4e4;
+  padding-bottom: 50px;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#video-section h2 {
+  margin-top: 100px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  font-size: 2.5rem;
+  color: #0b4f69;
+  font-weight: bold;
+}
+
+/*--------------------------------------*/
+
+@media screen and (max-width:944px) {
+  #form h1 {
+    font-size: 4rem;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: -15px;
+  }
+}
+
+@media screen and (max-width:834px) {
+  #form h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+  }
+  #image {
+    height: 400px;
+    bottom: 0;
+  }
+  .first-part {
+    height: 400px;
+  }
+}
+
+@media (max-width:768px) {
+  .hamburguer{
+    display: block;
+  }
+  .hamburguer.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburguer.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburguer.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .hamburguer.active {
+    position: fixed;
+    right: 50px;
+    z-index: 999;
+  }
+  .list {
+    position: fixed;
+    right: -150%;
+    gap: 0;
+    background-color: #2B3944;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    transition: 0.3s;
+    margin-top: -40px;
+    border-radius: 15px;
+    z-index: 999;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 16px;
+    margin-top: 20px;
+    z-index: 999;
+  }
+  .nav-item:nth-child(1) {
+    margin-top: 80px;
+  }
+  .list.active {
+    right: 0px;
+  }
+}
+
+@media screen and (max-width:692px) {
+  #form h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+  }
+  #form {
+    width: 70%;
+  }
+  .second-part {
+    margin-left: 16%;
+  }
+  #video-section h2 {
+    margin-top: 30px;
+  }
+  #video-section {
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width:659px) {
+  #form h1 {
+    font-size: 3.0rem;
+    margin-bottom: 15px;
+    margin-top: -10px;
+  }
+  #image {
+    height: 350px;
+    bottom: 0;
+  }
+  .first-part {
+    height: 350px;
+  }
+  #form{
+    width: 80%;
+    padding-left: 20px;
+  }
+  #header-img {
+    margin-left: 15px;
+  }
+  .list {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width:630px) {
+  nav a {
+    font-size: 1.8rem;
+  }
+  nav li {
+    margin: 0 0 0 10px;
+  }
+  nav { 
+    top: 35px;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width:560px) {
+  iframe {
+    width: 500px;
+    height: 255px;
+  }
+}
+
+@media screen and (max-width:534px) {
+  iframe {
+    width: 400px;
+    height: 225px;
+  }
+
+  #form{
+    width: 80%;
+    padding-left: 10px;
+  }
+  #form h1{
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Landing Page</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="header-bar">
+            <img src="/Imagens/logo.png" alt="logo cachorro" id="header-img">
+            <img src="/Imagens/logo2.png" alt="logo cachorro" id="header-img" class="hover_logo">
+            <nav id="nav-bar">
+                <ul class="list">
+                    <li class="nav-item"><a href="#form" class="nav-link">Formulario</a></li>
+                    <li class="nav-item"><a href="#second-part" class="nav-link">Adote um caozinho</a></li>
+                    <li class="nav-item"><a href="#video-section" class="nav-link">Porque adotar</a></li>
+                </ul>
+                <div class="hamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="first-part">
+            <section id="form">
+                <h1>Não Deixe de Adotar Um Cãozinho</h1>
+                <form action="https://www.freecodecamp.com/email-submit" id="form">
+                    <input type="email" name="email" id="email" class="email" placeholder="Seu Email :D">
+                    <input type="submit" name="submit" id="submit" class="submit" value="Enviar"
+                        action="https://www.freecodecamp.com/email-submit">
+                </form>
+            </section>
+            <section id="image">
+                <img src="/Imagens/cachorro-foto1.png" alt="relógio deitado">
+            </section>
+        </div>
+        <div class="second-part" id="second-part">
+            <h2>Motivos para se adotar um cachorro</h2>
+            <div id="icons">
+                <img src="/Imagens/icons/dog-heart-colored.png" alt="" class="icon-img">
+                <img src="/Imagens/icons/dog-heart-line.png" alt="" class="hover_img">
+                <h3>Vão te amar incondicionalmente</h3>
+            </div>
+            <div id="icons">
+                <img src="/Imagens/icons/dog-walking-colored.png" alt="" class="icon-img">
+                <img src="/Imagens/icons/dog-walking-line.png" alt="" class="hover_img">
+                <h3>Vamos movimentar a casa</h3>
+            </div>
+            <div id="icons">
+                <img src="/Imagens/icons/man-withdog-colored.png" alt="" class="icon-img">
+                <img src="/Imagens/icons/man-withdog-line.png" alt="" class="hover_img">
+                <h3>Vão te levar pra passear</h3>
+            </div>
+            <div id="icons">
+                <img src="/Imagens/icons/paw-colored.png" alt="" class="icon-img">
+                <img src="/Imagens/icons/paw-line.png" alt="" class="hover_img">
+                <h3>Já estamos vacinados</h3>
+            </div>
+        </div>
+        <section id="video-section">
+            <h2>Porque adotar e não comprar?</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cW9bug00pP4?controls=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
