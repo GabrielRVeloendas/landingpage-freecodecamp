@@ -67,6 +67,10 @@ nav :hover { /*referente ao link quando o usuário passar o mouse no menu */
     z-index: -1;
 }
 
+.hover_logo:hover {
+  z-index: 1;
+}
+
 .hamburguer {
   display: none;
   cursor: pointer;
@@ -271,7 +275,7 @@ input {
 
   .hamburguer.active {
     position: fixed;
-    right: 50px;
+    right: 20px;
     z-index: 999;
   }
   .list {
@@ -301,7 +305,7 @@ input {
     margin-top: 80px;
   }
   .list.active {
-    right: 0px;
+    right: -15px;
   }
 }
 
